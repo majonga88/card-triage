@@ -1,8 +1,11 @@
 import axios from 'axios';
 import AxiosMockAdapter from 'axios-mock-adapter';
 
-import { getCards } from './CardService';
 import { server } from '../mocks/server';
+import { server } from '../mocks/server';
+
+import { getCards } from './CardService';
+import { getCards } from './CardService';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());

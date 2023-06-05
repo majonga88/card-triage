@@ -36,7 +36,7 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: [['builtin', 'external'], ['parent', 'sibling'], 'index'],
+        groups: [['builtin', 'external'], 'parent', ['sibling', 'index']],
         'newlines-between': 'always',
         alphabetize: {
           order: 'asc',
@@ -56,6 +56,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
   },
   env: {
     node: true,

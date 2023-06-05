@@ -2,10 +2,11 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
+import CardColumns from './components/CardColumns';
 import { Card, getCards } from './services/CardService';
 
 const App: React.FC = () => {
-  const [cards, setCards] = useState<Card[]>([]);
+  const [_cards, setCards] = useState<Card[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,16 +21,7 @@ const App: React.FC = () => {
     fetchData();
   }, []);
 
-  return (
-    <div>
-      <h1>Patients</h1>
-      {cards.map((card) => (
-        <div key={card.id}>
-          <h2>{card.patient_name}</h2>
-        </div>
-      ))}
-    </div>
-  );
+  return <CardColumns></CardColumns>;
 };
 
 const root = ReactDOM.createRoot(
