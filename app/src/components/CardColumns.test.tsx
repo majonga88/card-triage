@@ -66,4 +66,19 @@ describe('CardColumns', () => {
       expect(doneColumn).toContainElement(screen.getByText('Bob'));
     });
   });
+
+  it('filters cards based on the search term', async () => {
+    render(<CardColumns />);
+
+    const searchInput = screen.getByLabelText(
+      'Search by patient name or arrhythmia'
+    );
+
+    fireEvent.change(searchInput, { target: { value: 'AFib' } });
+
+    await waitFor(() => {
+      expect(screen.getByText('Bob')).toBeInTheDocument();
+      expect(screen.queryByText('Bill')).not.toBeInTheDocument();
+    });
+  });
 });
