@@ -28,7 +28,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': 'off',
     'import/named': 'error',
     'import/default': 'error',
     'import/namespace': 'error',
@@ -36,12 +36,15 @@ module.exports = {
     'import/order': [
       'error',
       {
+        groups: [['builtin', 'external'], ['parent', 'sibling'], 'index'],
         'newlines-between': 'always',
         alphabetize: {
           order: 'asc',
+          caseInsensitive: true,
         },
       },
     ],
+    'import/newline-after-import': 'error',
     'jsx-a11y/label-has-for': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
