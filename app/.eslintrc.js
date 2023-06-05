@@ -12,10 +12,16 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
-    'prettier/react',
+    'prettier',
   ],
-  plugins: ['prettier', 'react', 'react-hooks', 'import', 'jsx-a11y', '@typescript-eslint'],
+  plugins: [
+    'prettier',
+    'react',
+    'react-hooks',
+    'import',
+    'jsx-a11y',
+    '@typescript-eslint',
+  ],
   rules: {
     'prettier/prettier': 'error',
     'react/prop-types': 'off',
@@ -45,7 +51,11 @@ module.exports = {
         aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
+    '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
+  env: {
+    node: true,
   },
   settings: {
     react: {
