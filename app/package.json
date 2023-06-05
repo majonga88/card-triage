@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "echo 'App start script'"
   },
@@ -11,10 +10,11 @@
     "type": "git",
     "url": "git@github.com:majonga88/card-triage.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CardioLogs/card-triage/issues"
-  },
-  "homepage": "https://github.com/CardioLogs/card-triage#readme"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
