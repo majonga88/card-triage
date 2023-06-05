@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CardioLogs/card-triage.git"
+    "url": "git@github.com:majonga88/card-triage.git"
   },
   "author": "",
   "license": "ISC",
